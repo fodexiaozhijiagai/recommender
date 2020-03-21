@@ -71,4 +71,6 @@ for key,value in userRecommendDict.items():
 # 我们将推荐结果的电影id转换成对应的电影名，并打印结果：
 recommendDF = pd.DataFrame(userRecommendList,columns=['userId','movieId'])
 recommendDF = pd.merge(recommendDF,moviesDF[['movieId','title']],on='movieId',how='inner')  #pandas的合并
-recommendDF
+
+recommendDF.head(10)
+recommendDF.tail(10)
